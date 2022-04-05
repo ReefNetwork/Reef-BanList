@@ -93,7 +93,7 @@ class _BanListState extends State<BanList> {
         SnackBar(
           backgroundColor: theme.scaffoldBackgroundColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
           ),
           content: Container(
             child: Row(
