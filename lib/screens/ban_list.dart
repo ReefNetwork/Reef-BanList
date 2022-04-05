@@ -101,7 +101,7 @@ class _BanListState extends State<BanList> {
               children: [
                 SelectableText(
                   "データを取得できませんでした(${ex.toString()})",
-                  style: theme.textTheme.bodyLarge,
+                  style: theme.textTheme.bodyText1,
                 ),
                 TextButton(
                   onPressed: () {
@@ -110,7 +110,7 @@ class _BanListState extends State<BanList> {
                   },
                   child: Text(
                     "再試行",
-                    style: theme.textTheme.bodyLarge,
+                    style: theme.textTheme.button,
                   ),
                 )
               ],
