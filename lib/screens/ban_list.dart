@@ -31,7 +31,12 @@ class _BanListState extends State<BanList> {
           IconButton(
             icon: Icon(Icons.sync_outlined),
             tooltip: "Reload",
-            onPressed: () {},
+            onPressed: () {
+              setState(() {
+                _bans = [];
+                _getBans();
+              });
+            },
           ),
         ],
         elevation: 0,
