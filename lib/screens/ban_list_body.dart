@@ -22,7 +22,7 @@ class BanListBody extends StatelessWidget {
       decoration: BoxDecoration(
           border: Border(bottom: BorderSide(width: 1.0, color: Colors.grey))),
       child: ListTile(
-        title: Text(
+        title: SelectableText(
           ban.name,
         ),
         onTap: () {},

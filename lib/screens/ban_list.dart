@@ -20,7 +20,6 @@ class _BanListState extends State<BanList> {
   @override
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
-    print(_bans);
 
     return Scaffold(
       appBar: AppBar(
@@ -66,6 +65,8 @@ class _BanListState extends State<BanList> {
   }
 
   Future _getBans() async {
+    ThemeData theme = Theme.of(context);
+
     try {
       final response = await http.get(_getApiUrl());
       if (response.statusCode != 200) {
@@ -79,26 +80,41 @@ class _BanListState extends State<BanList> {
       });
       setState(() {});
     } catch (ex) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Row(
-          children: [
-            SelectableText("データを取得できませんでした(${ex.toString()})"),
-            IconButton(
-              icon: Icon(Icons.sync_outlined),
-              tooltip: "Retry",
-              onPressed: () {
-                _getBans();
-              },
-            )
-          ],
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: theme.scaffoldBackgroundColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          content: Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                SelectableText(
+                  "データを取得できませんでした(${ex.toString()})",
+                  style: theme.textTheme.bodyLarge,
+                ),
+                TextButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).clearSnackBars();
+                    _getBans();
+                  },
+                  child: Text(
+                    "再試行",
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
-      ));
+      );
     }
   }
 
   Uri _getApiUrl() {
     var isDebug = false;
-    assert(isDebug = true);
+    // assert(isDebug = true);
     if (isDebug) {
       return Uri.parse(
           "http://localhost:5001/reef-mc/asia-northeast1/api/v1/ban/");
