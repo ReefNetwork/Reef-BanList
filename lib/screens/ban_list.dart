@@ -66,20 +66,34 @@ class _BanListState extends State<BanList> {
   }
 
   Future _getBans() async {
-    final response = await http.get(_getApiUrl());
+    try {
+      final response = await http.get(_getApiUrl());
+      if (response.statusCode != 200) {
+        throw Exception("${response.body}(${response.statusCode})");
+      }
 
-    if (response.statusCode != 200) {
+      _bans = [];
+      final List<dynamic> list = jsonDecode(response.body);
+      list.forEach((element) {
+        _bans.add(Ban.fromMap(element));
+      });
+      setState(() {});
+    } catch (ex) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: SelectableText("データを取得できませんでした(${response.statusCode})"),
+        content: Row(
+          children: [
+            SelectableText("データを取得できませんでした(${ex.toString()})"),
+            IconButton(
+              icon: Icon(Icons.sync_outlined),
+              tooltip: "Retry",
+              onPressed: () {
+                _getBans();
+              },
+            )
+          ],
+        ),
       ));
-      return;
     }
-    _bans = [];
-    final List<dynamic> list = jsonDecode(response.body);
-    list.forEach((element) {
-      _bans.add(Ban.fromMap(element));
-    });
-    setState(() {});
   }
 
   Uri _getApiUrl() {
