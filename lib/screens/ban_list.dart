@@ -16,6 +16,7 @@ class BanList extends StatefulWidget {
 
 class _BanListState extends State<BanList> {
   List<Ban> _bans = [];
+  bool _isProcession = false;
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +73,9 @@ class _BanListState extends State<BanList> {
   Future _getBans() async {
     ThemeData theme = Theme.of(context);
 
+    if (_isProcession) return;
+    _isProcession = true;
+
     try {
       final response = await http.get(_getApiUrl());
       if (response.statusCode != 200) {
@@ -115,11 +119,12 @@ class _BanListState extends State<BanList> {
         ),
       );
     }
+    _isProcession = false;
   }
 
   Uri _getApiUrl() {
     var isDebug = false;
-    // assert(isDebug = true);
+    assert(isDebug = true);
     if (isDebug) {
       return Uri.parse(
           "http://localhost:5001/reef-mc/asia-northeast1/api/v1/ban/");
