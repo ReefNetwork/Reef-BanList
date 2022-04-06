@@ -61,7 +61,10 @@ class _BanListState extends State<BanList> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircularProgressIndicator(),
-            SelectableText("読み込み中です...")
+            SizedBox(
+              height: 10,
+            ),
+            Text("読み込み中です...")
           ],
         ),
       );
