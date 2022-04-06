@@ -91,6 +91,7 @@ class _BanListState extends State<BanList> {
     } catch (ex) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
+          duration: Duration(days: 1),
           backgroundColor: theme.scaffoldBackgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
@@ -99,7 +100,7 @@ class _BanListState extends State<BanList> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SelectableText(
+                Text(
                   "データを取得できませんでした(${ex.toString()})",
                   style: theme.textTheme.bodyText1,
                 ),
