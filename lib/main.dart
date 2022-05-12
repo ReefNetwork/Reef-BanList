@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Reef BanList",
-      theme: ThemeData.light().copyWith(),
-      darkTheme: ThemeData.dark().copyWith(),
+      theme: ThemeData.light().copyWith(useMaterial3: true),
+      darkTheme: ThemeData.dark().copyWith(useMaterial3: true),
       home: BanList(),
     );
   }

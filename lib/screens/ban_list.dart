@@ -20,13 +20,10 @@ class _BanListState extends State<BanList> {
 
   @override
   Widget build(BuildContext context) {
-    ThemeData theme = Theme.of(context);
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "ReefServer BanList",
-          style: theme.textTheme.headline5,
         ),
         actions: [
           IconButton(
@@ -40,9 +37,6 @@ class _BanListState extends State<BanList> {
             },
           ),
         ],
-        elevation: 0,
-        actionsIconTheme: theme.iconTheme,
-        backgroundColor: theme.scaffoldBackgroundColor,
       ),
       body: _body(),
       floatingActionButton: FloatingActionButton(

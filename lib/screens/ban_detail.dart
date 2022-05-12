@@ -46,7 +46,8 @@ class BanDetail extends StatelessWidget {
                   _detailView(
                       theme, "端末 BAN", _ban.deviceBan == 1 ? "はい" : "いいえ"),
                   _detailView(theme, "BAN した人",
-                      _ban.byXuid == "0" ? "権限者" : _ban.byName)
+                      _ban.byXuid == "0" ? "権限者(コンソール)" : _ban.byName),
+                  _detailView(theme, "BAN ID", _ban.id.toString())
                 ],
               ),
             ),
