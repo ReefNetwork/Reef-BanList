@@ -17,11 +17,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    ThemeData theme =
+        ThemeData(useMaterial3: true, colorSchemeSeed: Color(0xff6750a4));
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Reef BanList",
-      theme: ThemeData.light().copyWith(useMaterial3: true),
-      darkTheme: ThemeData.dark().copyWith(useMaterial3: true),
+      theme: theme,
       home: BanList(),
     );
   }
