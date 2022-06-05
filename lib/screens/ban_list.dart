@@ -122,7 +122,7 @@ class _BanListState extends State<BanList> {
 
   Uri _getApiUrl() {
     var isDebug = false;
-    assert(isDebug = true);
+    // assert(isDebug = true);
     if (isDebug) {
       return Uri.parse(
           "http://localhost:5001/reef-mc/asia-northeast1/api/v1/ban/");
