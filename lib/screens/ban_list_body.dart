@@ -50,9 +50,11 @@ class BanListBody extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
             builder: (context) => DraggableScrollableSheet(
+                initialChildSize: 0.8,
+                snap: true,
                 expand: false,
-                builder: (context, scrollController) => SingleChildScrollView(
-                    controller: scrollController, child: BanDetail(ban))),
+                builder: (context, scrollController) =>
+                    BanDetail(ban, scrollController)),
           );
         },
         onLongPress: () {},

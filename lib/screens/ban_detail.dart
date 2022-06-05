@@ -4,8 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class BanDetail extends StatelessWidget {
   final Ban _ban;
+  final ScrollController _sheetController;
 
-  BanDetail(this._ban);
+  BanDetail(this._ban, this._sheetController);
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +104,8 @@ class BanDetail extends StatelessWidget {
 
     return Container(
       height: size.height * 0.8,
-      child: Column(
+      child: ListView(
+        controller: _sheetController,
         children: cards,
       ),
     );
