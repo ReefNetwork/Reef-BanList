@@ -3,23 +3,23 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"main.dart.js": "14a284ee967edc84ab8a16df876e2dec",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
+  "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
-"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
-"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
-"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"index.html": "9834a7ac44c9896420f84cdff5a0ed01",
+"/": "9834a7ac44c9896420f84cdff5a0ed01",
+"main.dart.js": "3dee1c443372abd0ef8bde911e99f4cd",
 "version.json": "9c76bafbc8cbe4af167e60fa354631af",
+"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
-"assets/NOTICES": "63e6d542ca9e37f51f861b8eda6c2417",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"flutter.js": "0816e65a103ba8ba51b174eeeeb2cb67",
-"index.html": "5f3bad1f5a8ea203e6e96f6a0ff4e4c4",
-"/": "5f3bad1f5a8ea203e6e96f6a0ff4e4c4",
+"assets/NOTICES": "1b4c00cc3097eac5ecd22503d7a6a30c",
 "manifest.json": "24cd9dba69a833d318128f8e3274b593"
 };
 
