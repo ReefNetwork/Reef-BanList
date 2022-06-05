@@ -13,6 +13,7 @@ class BanListBody extends StatelessWidget {
     return ListView(
       children: [
         ListView.builder(
+          physics: ScrollPhysics(),
           shrinkWrap: true,
           itemCount: _bans.length,
           itemBuilder: (BuildContext context, int index) {
