@@ -12,8 +12,8 @@ class BanDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     Size size = MediaQuery.of(context).size;
-    final create = DateTime.parse(_ban.createTime).toLocal();
-    final expire = DateTime.parse(_ban.expireTime).toLocal();
+    final create = DateTime.parse(_ban.createTime);
+    final expire = DateTime.parse(_ban.expireTime);
 
     List<Widget> cards = [
       Container(
