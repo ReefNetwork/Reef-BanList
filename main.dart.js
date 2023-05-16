@@ -59818,7 +59818,7 @@ a0.push(A.ab9(A.e8(r,A.a80(A.b([k,A.oB(A.b([j,A.a94(A.h5("\u3053\u3061\u3089",r,
 qi(){var s=0,r=A.a8(t.z)
 var $async$qi=A.a9(function(a,b){if(a===1)return A.a5(b,r)
 while(true)switch(s){case 0:s=2
-return A.ak(A.a7b(A.kr("https://blog.ree-jp.net/about-reef-server-anti-cheat/",0,null)),$async$qi)
+return A.ak(A.a7b(A.kr("https://reef.ree-jp.net/post/about-reef-server-anti-cheat/",0,null)),$async$qi)
 case 2:if(!b)throw A.c("Could not launch anti cheat doc")
 return A.a6(null,r)}})
 return A.a7($async$qi,r)},
@@ -59904,7 +59904,7 @@ return A.e8(s,new A.C3(A.r5(A.h5(a.w,s,s,s),s,s),new A.N5(b,a),new A.N6(),s),s,s
 qj(){var s=0,r=A.a8(t.z)
 var $async$qj=A.a9(function(a,b){if(a===1)return A.a5(b,r)
 while(true)switch(s){case 0:s=2
-return A.ak(A.a7b(A.kr("https://reef.ree-jp.net/page/",0,null)),$async$qj)
+return A.ak(A.a7b(A.kr("https://reef.ree-jp.net/",0,null)),$async$qj)
 case 2:if(!b)throw A.c("Could not launch reef page")
 return A.a6(null,r)}})
 return A.a7($async$qj,r)}}
