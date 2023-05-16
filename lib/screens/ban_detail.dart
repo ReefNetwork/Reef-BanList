@@ -21,7 +21,7 @@ class BanDetail extends StatelessWidget {
         width: size.width,
         child: SelectableText(
           _ban.name,
-          style: theme.textTheme.headline3,
+          style: theme.textTheme.displaySmall,
         ),
       ),
       Card(
@@ -33,7 +33,7 @@ class BanDetail extends StatelessWidget {
             children: [
               Text(
                 "詳細",
-                style: theme.textTheme.headline4,
+                style: theme.textTheme.headlineMedium,
                 textAlign: TextAlign.left,
               ),
               _detailView(theme, "理由", _ban.reason),
@@ -67,7 +67,7 @@ class BanDetail extends StatelessWidget {
                   Flexible(
                     child: Text(
                       "ReefAntiCheatが自動で検知し、BANされました",
-                      style: theme.textTheme.headline5,
+                      style: theme.textTheme.headlineSmall,
                       textAlign: TextAlign.left,
                     ),
                   ),
@@ -77,21 +77,21 @@ class BanDetail extends StatelessWidget {
                 children: [
                   Text(
                     "詳しくは",
-                    style: theme.textTheme.headline5,
+                    style: theme.textTheme.headlineSmall,
                     textAlign: TextAlign.left,
                   ),
                   TextButton(
                     onPressed: _launchAntiCheatDoc,
                     child: Text(
                       "こちら",
-                      style: theme.textTheme.headline5
+                      style: theme.textTheme.headlineSmall
                           ?.copyWith(color: Colors.blueAccent),
                       textAlign: TextAlign.left,
                     ),
                   ),
                   Text(
                     "をご覧ください",
-                    style: theme.textTheme.headline5,
+                    style: theme.textTheme.headlineSmall,
                     textAlign: TextAlign.left,
                   ),
                 ],
@@ -112,8 +112,8 @@ class BanDetail extends StatelessWidget {
   }
 
   void _launchAntiCheatDoc() async {
-    if (!await launchUrl(
-        Uri.parse("https://blog.ree-jp.net/about-reef-server-anti-cheat/")))
+    if (!await launchUrl(Uri.parse(
+        "https://reef.ree-jp.net/post/about-reef-server-anti-cheat/")))
       throw "Could not launch anti cheat doc";
   }
 
@@ -123,12 +123,12 @@ class BanDetail extends StatelessWidget {
       children: [
         Text(
           title,
-          style: theme.textTheme.headline5,
+          style: theme.textTheme.headlineSmall,
         ),
         Flexible(
           child: SelectableText(
             value,
-            style: theme.textTheme.headline5,
+            style: theme.textTheme.headlineSmall,
           ),
         ),
       ],

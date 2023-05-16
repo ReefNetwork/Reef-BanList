@@ -64,7 +64,7 @@ class BanListBody extends StatelessWidget {
   }
 
   void _launchDescription() async {
-    if (!await launchUrl(Uri.parse("https://reef.ree-jp.net/page/")))
+    if (!await launchUrl(Uri.parse("https://reef.ree-jp.net/")))
       throw "Could not launch reef page";
   }
 }
